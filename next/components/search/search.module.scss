@@ -1,0 +1,60 @@
+@import '@/style/mixin';
+
+.search {
+  position: relative;
+  @include flexRowStartCenter();
+  gap: 32px;
+  width: 600px;
+  height: 100%;
+}
+
+.searchInput {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 100%;
+  border-radius: 12px;
+  background-color: var(--color-background);
+  @include flexRowStartCenter();
+  padding: 0 16px;
+  outline: 2px solid var(--color-stroke);
+  transition: 400ms outline;
+  gap: 8px;
+  color: var(--text-secondary);
+  &:focus-within {
+    outline: 2px solid var(--color-app);
+    color: var(--text-main);
+  }
+  > input {
+    color: var(--text-secondary);
+    background-color: var(--color-background);
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    &:active,
+    &:focus {
+      color: var(--text-main);
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.iconSearch {
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0);
+  width: 20px;
+  height: 20px;
+  background-image: url('./../../public/search.svg');
+  background-size: cover;
+}
+
+.buttonNotification {
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url('./../../public/Notification.svg');
+  background-size: cover;
+  width: 36px;
+  height: 36px;
+}

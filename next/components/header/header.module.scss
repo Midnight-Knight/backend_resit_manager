@@ -1,0 +1,31 @@
+@import '@/style/mixin';
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: var(--color-blocks);
+  @include flexRowBetweenCenter();
+  height: 68px;
+  padding: 16px 20px;
+}
+
+.blockLogoAndTitle {
+  @include flexRowStartCenter();
+  gap: 8px;
+  color: var(--text-main);
+  width: 220px;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.future {
+  width: 220px;
+  height: 100%;
+}
+
+.image {
+  width: 36px;
+  height: 36px;
+}

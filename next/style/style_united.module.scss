@@ -1,0 +1,33 @@
+@import 'mixin';
+
+.page {
+  width: 100%;
+  min-height: calc(100vh - 68px);
+  background-color: var(--color-background);
+}
+
+.scrollDiv {
+  width: 100%;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: auto;
+  height: calc(100vh - 68px);
+  border-radius: 32px 0px 0px 0px;
+  box-sizing: content-box;
+  border-top: 2px solid var(--color-stroke);
+  border-left: 2px solid var(--color-stroke);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid var(--color-stroke);
+}
+
+.background {
+  padding: 24px;
+  @include flexColumnStartCenter();
+  gap: 16px;
+}

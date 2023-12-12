@@ -1,0 +1,84 @@
+@import '@/style/mixin';
+
+.card {
+  min-width: 296px;
+  border-radius: 16px;
+  background-color: var(--color-blocks);
+  border: 2px solid var(--color-stroke);
+  @include boxShadow();
+  padding: 24px;
+}
+
+.department {
+  @include flexColumnBetweenStart();
+  gap: 20px;
+  width: 100%;
+  > div {
+    @include flexColumnStartStart();
+    width: 100%;
+    gap: 20px;
+    h5 {
+      color: var(--text-secondary);
+    }
+    h3 {
+      color: var(--text-main);
+    }
+  }
+}
+
+.disciplines {
+  @include flexColumnBetweenStart();
+  gap: 20px;
+  width: 100%;
+  > div {
+    @include flexColumnStartStart();
+    width: 100%;
+    gap: 20px;
+    > div {
+      width: 100%;
+      @include flexColumnStartStart();
+    }
+  }
+  h5,
+  p {
+    color: var(--text-secondary);
+  }
+  h3 {
+    color: var(--text-main);
+  }
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--color-stroke);
+}
+
+.retake
+{
+  @include flexColumnBetweenStart();
+  gap: 20px;
+  width: 100%;
+  > div {
+    @include flexColumnStartStart();
+    width: 100%;
+    gap: 20px;
+    > div {
+      width: 100%;
+      @include flexColumnStartStart();
+      > h3
+      {
+        font-weight: normal;
+        font-size: 16px;
+      }
+    }
+  }
+  h5,
+  p {
+    color: var(--text-secondary);
+  }
+  h3 {
+    color: var(--text-main);
+  }
+}

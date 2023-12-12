@@ -1,0 +1,10 @@
+@import '@/style/mixin';
+
+.table {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(296px, 1fr));
+  grid-template-rows: min-content(1fr);
+  row-gap: 32px;
+  column-gap: 24px;
+}

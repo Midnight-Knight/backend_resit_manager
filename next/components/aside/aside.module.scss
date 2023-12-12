@@ -1,0 +1,17 @@
+@import '@/style/mixin';
+
+.nav {
+  width: 260px;
+  min-height: calc(100vh - 68px);
+  overflow-y: auto;
+  background-color: var(--color-blocks);
+  flex-shrink: 0;
+  padding: 16px 20px;
+  @include flexColumnStartStart();
+  gap: 8px;
+  color: var(--color-app);
+  > ul {
+    width: 100%;
+    @include flexColumnStartStart();
+  }
+}

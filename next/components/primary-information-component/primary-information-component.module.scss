@@ -1,0 +1,12 @@
+@import '@/style/mixin';
+
+.mainBlock {
+  width: 100%;
+  background-color: var(--color-blocks);
+  padding: 32px;
+  @include flexColumnStartStart();
+  gap: 28px;
+  border-radius: 16px;
+  border: 2px solid var(--color-stroke);
+  @include boxShadow();
+}

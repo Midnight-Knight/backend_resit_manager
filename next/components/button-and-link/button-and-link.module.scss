@@ -1,0 +1,41 @@
+@import '@/style/mixin';
+
+.buttonNav {
+  width: 100%;
+  height: 36px;
+  border-radius: 12px;
+  gap: 12px;
+  padding: 8px 16px;
+  @include flexRowStartCenter();
+  color: var(--text-secondary);
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 200ms, color 200ms, filter 200ms;
+  &:hover {
+    background-color: var(--color-background);
+  }
+}
+
+.buttonNavActive {
+  color: #ffffff;
+  background-color: var(--color-app);
+  > img {
+    filter: invert(0%);
+  }
+  &:hover {
+    background-color: var(--color-app-hover);
+  }
+}
+
+.image {
+  filter: invert(50%);
+  width: 18px;
+  height: 18px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: filter 200ms;
+}
+
+.link {
+  @include flexRowStartCenter();
+  gap: 10px;
+  color: var(--color-app);
+}

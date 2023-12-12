@@ -1,0 +1,52 @@
+@import '@/style/mixin';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+:root {
+  --color-background: #f2f4f8;
+  --color-blocks: #ffffff;
+  --color-stroke: #dde1e6;
+  --text-main: #111111;
+  --text-secondary: #808080;
+  --color-app: #268bd9;
+  --color-app-hover: #379cea;
+  --color-shadow: rgba(0, 0, 0, 0.17);
+}
+
+button,
+button:active,
+button:focus {
+  border: none;
+  outline: none;
+}
+
+p {
+  font-weight: 300;
+}
+
+h4 {
+  font-weight: 700;
+}
+
+span {
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+  @include flexRowStartStart();
+  padding-top: 68px;
+}

@@ -1,0 +1,59 @@
+@import '@/style/mixin';
+
+.block {
+  position: relative;
+  overflow: hidden;
+  height: 36px;
+  padding: 8px 16px;
+  @include flexRowStartCenter();
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.block_info {
+  background: var(--color-app);
+  gap: 12px;
+  color: #ffffff;
+  > p {
+    font-weight: 400;
+  }
+  > hr {
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 2px;
+    height: 16px;
+    border: none;
+    width: 2px;
+    background-color: #ffffff;
+  }
+}
+
+.block_loading {
+  width: 242px;
+  height: 36px;
+  background-color: var(--color-background);
+}
+
+.block_loading_big {
+  flex: 1;
+  height: 110px;
+  background-color: var(--color-background);
+}
+
+.loading_wave {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: var(--color-blocks);
+  box-shadow: 0 0 32px 32px var(--color-blocks);
+  animation: LoadingBlock 3s infinite;
+}
+
+@keyframes LoadingBlock {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 150%;
+  }
+}

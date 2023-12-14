@@ -2,7 +2,9 @@ import My_Api from '@/my_api';
 
 export async function generateStaticParams() {
   const data = await My_Api.getCheckDepartments();
-  return data;
+  return data.map((elem) => {
+    return { department: elem.department };
+  });
 }
 
 export const dynamicParams = false;

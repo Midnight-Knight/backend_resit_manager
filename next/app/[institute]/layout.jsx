@@ -2,6 +2,7 @@ import My_Api from '@/my_api';
 
 export async function generateStaticParams() {
   const data = await My_Api.getCheckInstitute();
+
   return data.map((elem) => {
     return { institute: elem.institute };
   });

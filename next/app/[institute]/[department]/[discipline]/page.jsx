@@ -6,28 +6,12 @@ import {
    BigBlockInformationDiscipline,
 } from '@/components/primary-information-component';
 import {
-  PanelTableDepartment,
   PanelTableRetake,
 } from '@/components/table-control-panel';
 
 
 export default async function Discipline({ params }) {
   const dataDiscipline = await My_Api.getDisciplineInfo(params.discipline);
-  /*
-
-  let blocks_contacts_department = undefined,
-      blocks_hours_department = undefined;
-  if (dataDepartment.contacts_department !== undefined) {
-    blocks_contacts_department = renderBlocks(dataDepartment.contacts_department, 'contacts_department');
-  }
-  if (dataDepartment.opening_hours_department !== undefined) {
-    blocks_hours_department = renderBlocks(dataDepartment.opening_hours_department, 'opening_hours_department');
-  }
-
-  // пока временно ,потом заменю на метод класса менеджера api
-  const dataBaccalaureate = await My_Api.getDepartmentsBaccalaureate(params.department),
-      dataMagistracy = await My_Api.getDepartmentsMagistracy(params.department),
-      dataSpecialty = await My_Api.getDepartmentsSpecialty(params.department); */
 
   const dataRetakes = await My_Api.getRetakesDiscipline(params.discipline);
   console.log("1", dataRetakes);

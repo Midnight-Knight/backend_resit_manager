@@ -408,13 +408,3 @@ app.post('/api/post/get_retakes_discipline', async (req, res) => {
 const server = app.listen(PORT, () => {
   console.log('server start, port '+ PORT);
 })
-
-server.close(function () {
-  connection.end(function(err) {
-    if (err) {
-      return console.log("Ошибка: " + err.message);
-    }
-    console.log("Подключение к БД закрыто");
-  });
-  console.log('Server has stopped');
-});
